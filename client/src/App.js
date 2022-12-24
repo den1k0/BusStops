@@ -5,28 +5,42 @@ import "react-widgets/styles.css";
 import "./App.css";
 
 const API_LINK = process.env.REACT_APP_API;
+
 const stopsAPI = `${API_LINK}/api/bus_stops`;
+
 const routesAPI = `${API_LINK}/api/bus_routes`;
+
 const timesAPI = `${API_LINK}/api/bus_times`;
+
 const tripsAPI = `${API_LINK}/api/bus_trips`;
+
 function App() {
     const [stops, setStops] = useState([]);
     const [routes, setRoutes] = useState([]);
     const [times, setTimes] = useState([]);
     const [trips, setTrips] = useState([]);
+
     const [loaded, setLoaded] = useState(false);
+
     const fetchData = async () => {
         const getStopsInfo = await axios.get(stopsAPI);
+
         const getRoutesInfo = await axios.get(routesAPI);
+
         const getTimesInfo = await axios.get(timesAPI);
+
         const getTripsInfo = await axios.get(tripsAPI);
+
         axios
             .all([getStopsInfo, getRoutesInfo, getTimesInfo, getTripsInfo])
             .then(
                 axios.spread((...allData) => {
                     const stopsData = allData[0].data.bus_stops;
+
                     const routesData = allData[1].data.bus_routes;
+
                     const timesData = allData[2].data.bus_times;
+
                     const tripsData = allData[3].data.bus_trips;
 
                     setStops(stopsData);
@@ -99,7 +113,6 @@ function App() {
                         }
                     }
                 });
-                // bool and text changes
                 setUseGEO(true);
                 const userRegionText = document.querySelector("#userRegion");
                 userRegionText.innerHTML = ` ${userRegion}`;
@@ -108,8 +121,7 @@ function App() {
                 closestStopText.innerHTML = ` ${closestStop}`;
             },
             () => {
-                // Location prompt is declined //
-                setUseGEO(false); // Set bool to false *used in render*
+                setUseGEO(false);
             }
         );
     };
@@ -164,7 +176,6 @@ function App() {
         if (selectedRadioValue == "route") {
             console.log("Selected: Look for direct route");
         }
-        // CODE
         console.log(shortNames);
         const bus_ids = document.querySelector(".bus_ids");
         while (bus_ids.lastElementChild) {
@@ -178,7 +189,6 @@ function App() {
             bus_ids.appendChild(id_elem);
         });
     };
-    // WEB PAGE RENDER
     return (
         <div className="App">
             <div className="spacergrid grid"></div>
