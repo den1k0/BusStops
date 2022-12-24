@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "npm-install-all": "^1.1.21",
+    "src": "^1.1.2"
+  }
+}
