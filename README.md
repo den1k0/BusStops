@@ -5,7 +5,7 @@ After that check if you have the file (.env) in the client folder. If not create
 
 ### `REACT_APP_API=http://localhost:5000`
 
-After that run in order - in server first, then in client second this command:
+After that run in order - in server directory first, then in client directory second this command:
 
 ### `npm start`
 
