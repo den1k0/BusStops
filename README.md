@@ -1,3 +1,5 @@
+Kuni punktini 18 oli projekt tehtud. Kuigi pärast oli juba raske.
+
 Before you run the project, make sure you have installed all of the modules, by typing this command in the client and server directory(Assuming you have installed node js):
 ### `npm i`
 
