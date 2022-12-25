@@ -1,67 +1,21 @@
-/* body {
-  background-color: #282c34;
-  color: white;
-  font-family: Sans-Serif;
-  text-align: center;
-} */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 body {
     background-color: #350434;
     color: white;
-    font-family: Montserrat;
+    font-family: Sans-serif;
     margin: 0;
     overflow-x: hidden;
     height: max-content;
-}
-.avialableBusses {
-    color: #9200ba;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -125px;
-    height: 0px;
-    width: 750px;
-}
-.busButton {
-    width: 50px;
-    height: 30px;
-    text-align: center;
-    color: white;
-    background: rgba(95, 3, 134, 0.662);
-    border-radius: 0.5rem;
-    border-color: rgba(0, 0, 0, 0.379);
-    cursor: pointer;
-    transition: 0.5s;
-}
-.busButton:hover {
-    background: rgba(169, 19, 233, 0.662);
-    border: transparent;
-}
-.spacergrid {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    aspect-ratio: 2/1;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    /* max-height: 100%; */
-    /* height: 100%; */
-}
-.grid {
-    background-image: url("./grid.svg");
 }
 .userLocationDiv {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     margin: 25px 0 0 0;
-    width: 600px;
+    width: 580px;
     padding: 1.5rem 0 1.5rem 0;
     border-radius: 0.3rem;
     background: #001122dc;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 .userLocationDiv span {
     color: #9200ba;
@@ -78,7 +32,7 @@ body {
     line-height: 1.5;
     border-radius: 0.3rem;
     transition: 0.2s;
-    position:relative; left:-200px; top:15px;
+    position:relative; left:-190px; top:24px;
 }
 .submit:hover {
     background-color: #002143;
@@ -87,20 +41,19 @@ body {
 }
 .combobox-widgets {
     width: 350px;
-    position: absolute;
+    position: absolute; top:200px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
 }
 .widget-one {
-    padding: 15px 0px 15px 0x;
+    padding: 15px 0px 30px 0x;
     position:relative; left:-180px; top:15px;
 
 }
 .widget-two {
     padding: 0px 0px 15px 0px;
     position:relative; left:180px; top:-24px;
-    /* width: 375px; */
 }
 .notGrantedDiv {
     position: absolute;
@@ -113,4 +66,42 @@ body {
     background: #001122ab;
     box-shadow: 10px 10px #001122e3;
     font-size: 0.9rem;
+}
+.availableBusses {
+    color: #9200ba;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -125px;
+    height: 0px;
+    width: 750px;
+    font-size: 1.5rem;
+}
+.busButton {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    background: rgba(95, 3, 134, 0.662);
+    border-radius: 0.5rem;
+    border-color: rgba(0, 0, 0, 0.379);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.spacergrid {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 2/1;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.busButton:hover {
+    background: rgba(169, 19, 233, 0.662);
+    border: transparent;
+}
+.grid {
+    background-image: url("./grid.svg");
 }
